@@ -1,4 +1,3 @@
-import javafx.scene.input.KeyCombination.Modifier
 import kotlin.random.Random
 import kotlin.random.nextInt
 
@@ -14,7 +13,7 @@ inline fun narrate(
 fun changeNarratorMood() {
     val mood: String
     val modifier: (String) -> String
-    when (Random.nextInt(1..4)) {
+    when (Random.nextInt(1..6)) {
         1 -> {
             mood = "loud"
             modifier = { message ->
@@ -34,6 +33,26 @@ fun changeNarratorMood() {
                 "$message?"
             }
         }
+        4 -> {
+            var narrationsGiven = 0
+            mood = "like sending an itemized bill"
+            modifier = {it ->
+                narrationsGiven++
+                "$it.\n((I have narrated $narrationsGiven things)"
+            }
+        }
+        5 -> {
+            mood = "lazy like lazy"
+            modifier = {message ->
+                "${message.subSequence(0,40)} ...i sleep"
+            }
+        }
+        6 -> {
+            mood = "leet"
+            modifier = {message ->
+                message.replace(oldChar = 'l', newChar = '1', ignoreCase = true)
+            }
+        }
         else -> {
             mood = "professional"
             modifier = { message ->
@@ -44,4 +63,5 @@ fun changeNarratorMood() {
     narrativeModifier = modifier
     narrate("The narrator begins to feel $mood")
 }
+
 
