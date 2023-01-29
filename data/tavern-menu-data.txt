@@ -1,0 +1,7 @@
+0 : shandy,Dragon's Breath,5.91
+1 : elixir,Shirley's Temple,4.12
+2 : meal,Goblet of LaCroix,1.22
+3 : desert dessert,Pickled Camel Hump,7.33
+4 : elixir,Iced Boilermaker,11.22
+5 : deserved dessert,Hard Day's Work Ice Cream,3.21
+6 : meal,Bite of Lembas Bread,0.59
