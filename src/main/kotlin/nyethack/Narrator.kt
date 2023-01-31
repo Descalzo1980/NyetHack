@@ -1,3 +1,5 @@
+package nyethack
+
 import kotlin.random.Random
 import kotlin.random.nextInt
 
@@ -5,7 +7,7 @@ var narrativeModifier: (String) -> String = { it }
 
 inline fun narrate(
     message: String,
-    modifier: (String) -> String = {narrativeModifier(it)}
+    modifier: (String) -> String = { narrativeModifier(it) }
 ){
     println(modifier(message))
 }

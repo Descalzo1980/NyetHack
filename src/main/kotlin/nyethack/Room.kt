@@ -1,0 +1,4 @@
+package nyethack
+
+class Room {
+}
